@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="mainPane" prefHeight="614.0" prefWidth="895.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controller.ControllerLoading">
+   <children>
+      <Pane fx:id="paneTxt" layoutX="-1.0" layoutY="118.0" prefHeight="59.0" prefWidth="910.0" style="-fx-background-color: #2A3132;" AnchorPane.bottomAnchor="436.8" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="117.99999999999999">
+         <children>
+            <Label fx:id="lblInPane" layoutX="311.0" layoutY="7.0" prefHeight="45.0" prefWidth="274.0" text="Mengenoperationen" textAlignment="JUSTIFY" textFill="WHITE">
+               <font>
+                  <Font size="30.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Label fx:id="lblLoad" layoutX="360.0" layoutY="465.0" text="Please wait while laoding...">
+         <font>
+            <Font size="16.0" />
+         </font></Label>
+      <AnchorPane fx:id="anchorPanes" prefHeight="118.0" prefWidth="895.0" AnchorPane.bottomAnchor="495.6" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Pane fx:id="p1" layoutX="-1.0" prefHeight="59.0" prefWidth="70.0" style="-fx-background-color: #ffffff;" />
+            <Pane fx:id="p2" layoutX="769.0" prefHeight="59.0" prefWidth="70.0" style="-fx-background-color: #ffffff;" />
+            <Pane fx:id="p3" layoutX="629.0" prefHeight="59.0" prefWidth="69.0" style="-fx-background-color: #90AFC5;" />
+            <Pane fx:id="p4" layoutX="699.0" layoutY="59.0" prefHeight="59.0" prefWidth="69.0" style="-fx-background-color: #90AFC5;" />
+            <Pane fx:id="p5" layoutX="839.0" prefHeight="59.0" prefWidth="70.0" style="-fx-background-color: #763626;" />
+            <Pane fx:id="p6" layoutX="769.0" layoutY="59.0" prefHeight="59.0" prefWidth="70.0" style="-fx-background-color: #763626;" />
+            <Pane fx:id="p7" layoutX="559.0" prefHeight="59.0" prefWidth="70.0" style="-fx-background-color: #ffffff;" />
+            <Pane fx:id="p8" layoutX="629.0" layoutY="59.0" prefHeight="59.0" prefWidth="70.0" style="-fx-background-color: #763626;" />
+            <Pane fx:id="p9" layoutX="559.0" layoutY="59.0" prefHeight="59.0" prefWidth="69.0" style="-fx-background-color: #90AFC5;" />
+            <Pane fx:id="p10" layoutX="489.0" layoutY="59.0" prefHeight="59.0" prefWidth="70.0" style="-fx-background-color: #ffffff;" />
+            <Pane fx:id="p11" layoutX="489.0" prefHeight="59.0" prefWidth="70.0" style="-fx-background-color: #763626;" />
+            <Pane fx:id="p11" layoutX="419.0" layoutY="59.0" prefHeight="59.0" prefWidth="69.0" style="-fx-background-color: #90AFC5;" />
+            <Pane fx:id="p12" layoutX="419.0" prefHeight="59.0" prefWidth="70.0" style="-fx-background-color: #ffffff;" />
+            <Pane fx:id="p13" layoutX="349.0" prefHeight="59.0" prefWidth="70.0" style="-fx-background-color: #763626;" />
+            <Pane fx:id="p14" layoutX="349.0" layoutY="59.0" prefHeight="59.0" prefWidth="70.0" style="-fx-background-color: #ffffff;" />
+            <Pane fx:id="p15" layoutX="279.0" prefHeight="59.0" prefWidth="69.0" style="-fx-background-color: #90AFC5;" />
+            <Pane fx:id="p16" layoutX="279.0" layoutY="59.0" prefHeight="59.0" prefWidth="70.0" style="-fx-background-color: #763626;" />
+            <Pane fx:id="p17" layoutX="139.0" layoutY="59.0" prefHeight="59.0" prefWidth="69.0" style="-fx-background-color: #90AFC5;" />
+            <Pane fx:id="p18" layoutX="209.0" prefHeight="59.0" prefWidth="70.0" style="-fx-background-color: #763626;" />
+            <Pane fx:id="p19" layoutX="209.0" layoutY="59.0" prefHeight="59.0" prefWidth="70.0" style="-fx-background-color: #ffffff;" />
+            <Pane fx:id="p20" layoutX="139.0" prefHeight="59.0" prefWidth="70.0" style="-fx-background-color: #ffffff;" />
+            <Pane fx:id="p21" layoutX="69.0" layoutY="59.0" prefHeight="59.0" prefWidth="70.0" style="-fx-background-color: #763626;" />
+            <Pane fx:id="p22" layoutX="70.0" prefHeight="59.0" prefWidth="69.0" style="-fx-background-color: #90AFC5;" />
+            <Pane fx:id="p23" layoutY="59.0" prefHeight="59.0" prefWidth="69.0" style="-fx-background-color: #90AFC5;" />
+            <Pane fx:id="p24" layoutX="698.0" prefHeight="59.0" prefWidth="70.0" style="-fx-background-color: #763626;" />
+            <Pane fx:id="p25" layoutX="839.0" layoutY="59.0" prefHeight="59.0" prefWidth="69.0" style="-fx-background-color: #90AFC5;" />
+         </children>
+      </AnchorPane>
+      <Label layoutX="377.0" layoutY="307.0" prefHeight="66.0" prefWidth="154.0" text="Welcome">
+         <font>
+            <Font size="35.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

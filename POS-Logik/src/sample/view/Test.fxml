@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.canvas.Canvas?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="main" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="624.0" prefWidth="911.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controller.Controller2">
+   <children>
+      <MenuBar fx:id="menuBar" layoutX="233.0" layoutY="1.0" prefHeight="47.0" prefWidth="693.0" style="-fx-background-color: #336B87;" stylesheets="@../stylesheet.css" AnchorPane.bottomAnchor="577.0" AnchorPane.leftAnchor="233.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <menus>
+            <Menu fx:id="menuFile" mnemonicParsing="false" text="File">
+               <items>
+                  <MenuItem fx:id="menuItemClose" mnemonicParsing="false" onAction="#handleClicks" text="Close" />
+                  <MenuItem fx:id="menuItemExport" mnemonicParsing="false" onAction="#handleClicks" text="Export" />
+                  <MenuItem fx:id="menuItemImport" mnemonicParsing="false" onAction="#handleClicks" text="Import" />
+               </items>
+            </Menu>
+         </menus>
+      </MenuBar>
+      <VBox prefHeight="600.0" prefWidth="223.0" style="-fx-background-color: #336B87;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="671.8" AnchorPane.topAnchor="0.0">
+         <children>
+            <Pane prefHeight="91.0" prefWidth="219.0" style="-fx-background-color: #90AFC5;">
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+               <children>
+                  <Label layoutX="35.0" layoutY="25.0" prefHeight="42.0" prefWidth="154.0" text="Lindor &amp; Marco " textFill="WHITE">
+                     <font>
+                        <Font size="21.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <Button fx:id="managmentBtn" mnemonicParsing="false" onAction="#handleClicks" prefHeight="47.0" prefWidth="219.0" style="-fx-background-color: #336B87;" text="Managment " textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+               <VBox.margin>
+                  <Insets top="5.0" />
+               </VBox.margin>
+            </Button>
+            <Button fx:id="workspaceBtn" mnemonicParsing="false" onAction="#handleClicks" prefHeight="47.0" prefWidth="219.0" style="-fx-background-color: #336B87;" text="Workspace" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <VBox.margin>
+                  <Insets top="5.0" />
+               </VBox.margin>
+            </Button>
+            <Button fx:id="durchschnittBtn" mnemonicParsing="false" onAction="#handleClicks" prefHeight="47.0" prefWidth="219.0" style="-fx-background-color: #336B87;" text="Durchschnitt (n)" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Button>
+            <Button fx:id="vereinigungBtn" mnemonicParsing="false" onAction="#handleClicks" prefHeight="47.0" prefWidth="219.0" style="-fx-background-color: #336B87;" text="Vereinigung (u)" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Button>
+            <Button fx:id="komplementBtn" mnemonicParsing="false" prefHeight="47.0" prefWidth="219.0" style="-fx-background-color: #336B87;" text="Komplement (C)" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Button>
+            <Button fx:id="potenzmengeBtn" mnemonicParsing="false" onAction="#handleClicks" prefHeight="47.0" prefWidth="219.0" style="-fx-background-color: #336B87;" text="Potenzmenge (P)" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Button>
+            <Button fx:id="deltaBtn" mnemonicParsing="false" onAction="#handleClicks" prefHeight="47.0" prefWidth="219.0" style="-fx-background-color: #336B87;" text=" Delta " textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Button>
+            <Button fx:id="differenzBtn" mnemonicParsing="false" onAction="#handleClicks" prefHeight="47.0" prefWidth="219.0" style="-fx-background-color: #336B87;" text="Differenz (\)" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Button>
+         </children>
+      </VBox>
+      <Pane fx:id="pnlStatus" layoutX="240.0" layoutY="27.0" prefHeight="66.0" prefWidth="686.0" style="-fx-background-color: #2A3132;" AnchorPane.leftAnchor="240.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="26.0">
+         <children>
+            <Label fx:id="pnlLblStatus" layoutX="303.0" layoutY="16.0" text="Status" textFill="WHITE">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <StackPane layoutX="239.0" layoutY="92.0" prefHeight="530.0" prefWidth="670.0" AnchorPane.bottomAnchor="2.0">
+         <children>
+            <AnchorPane fx:id="paneWorkspace" prefHeight="536.0" prefWidth="722.0" visible="false">
+               <children>
+                  <Canvas fx:id="canvas" height="384.0" width="670.0" AnchorPane.bottomAnchor="146.39999999999998" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.39999999999997726" AnchorPane.topAnchor="0.0" />
+                  <Label fx:id="lblErgebnis" layoutX="14.0" layoutY="429.0" text="Ergebnis: " AnchorPane.bottomAnchor="35.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="570.0" AnchorPane.topAnchor="430.0">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <TextArea fx:id="txtErgebnis" layoutX="100.0" layoutY="404.0" prefHeight="103.0" prefWidth="560.0" AnchorPane.bottomAnchor="12.0" AnchorPane.leftAnchor="100.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="405.0" />
+                  <Label fx:id="lbNoteWork" layoutX="100.0" layoutY="384.0" />
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="paneManagment" prefHeight="200.0" prefWidth="200.0" visible="false">
+               <children>
+                  <ListView fx:id="listViewManagement" accessibleRoleDescription="Menge" layoutX="15.0" layoutY="404.0" prefHeight="91.0" prefWidth="640.0" />
+                  <Button fx:id="erstellenBtn" layoutX="14.0" layoutY="354.0" mnemonicParsing="false" onAction="#handleClicks" prefHeight="41.0" prefWidth="114.0" text="Erstellen" />
+                  <Button fx:id="loeschenBtn" layoutX="541.0" layoutY="354.0" mnemonicParsing="false" prefHeight="41.0" prefWidth="114.0" text="Löschen" />
+                  <Label layoutX="-2.0" layoutY="-2.0" prefHeight="57.0" prefWidth="672.0" style="-fx-background-color: #763626;" text="Werte: " textFill="WHITE" AnchorPane.leftAnchor="-1.0" AnchorPane.rightAnchor="-15.0" AnchorPane.topAnchor="-2.0">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                     <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </padding>
+                  </Label>
+                  <Label fx:id="lbNoteWork20" layoutY="497.0" text="Note: Hier können Sie ein Menge erstellen." />
+                  <ListView fx:id="listZahlen" layoutX="216.0" layoutY="149.0" prefHeight="142.0" prefWidth="238.0" />
+                  <Label layoutX="312.0" layoutY="112.0" text="Werte">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="paneKomplement" layoutX="10.0" layoutY="10.0" prefHeight="200.0" prefWidth="200.0" visible="false">
+               <children>
+                  <ListView fx:id="listViewManagement2" accessibleRoleDescription="Menge" layoutX="15.0" layoutY="404.0" prefHeight="91.0" prefWidth="640.0" />
+                  <Button fx:id="berechneKompBtn" layoutX="183.0" layoutY="281.0" mnemonicParsing="false" onAction="#handleClicks" prefHeight="42.0" prefWidth="304.0" text="Berechne" />
+                  <Label fx:id="lbNoteWork2" layoutX="15.0" layoutY="386.0" text="Note: Hier sehen Sie die schon erstellten Mengen" />
+                  <Label layoutX="113.0" layoutY="161.0" text="Buchstabe / Letter: ">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="txtFeldLetterKomp" layoutX="335.0" layoutY="161.0" prefHeight="26.0" prefWidth="65.0" />
+                  <Label fx:id="lbNoteWork111" layoutX="117.0" layoutY="67.0" text="Wichtig: Sie müssen zwei Mengen erstellen damit der berechne Button auftaucht :)" />
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="panePotenz" layoutX="10.0" layoutY="10.0" prefHeight="200.0" prefWidth="200.0" visible="false">
+               <children>
+                  <ListView fx:id="listViewManagement3" accessibleRoleDescription="Menge" layoutX="15.0" layoutY="404.0" prefHeight="91.0" prefWidth="640.0" />
+                  <Button fx:id="berechnePotenzBtn" layoutX="183.0" layoutY="281.0" mnemonicParsing="false" onAction="#handleClicks" prefHeight="42.0" prefWidth="304.0" text="Berechne" />
+                  <Label fx:id="lbNoteWork3" layoutX="15.0" layoutY="386.0" text="Note: Hier sehen Sie die schon erstellten Mengen" />
+                  <Label layoutX="113.0" layoutY="161.0" text="Buchstabe / Letter: ">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="txtFeldLetterPotenz" layoutX="335.0" layoutY="161.0" prefHeight="26.0" prefWidth="65.0" />
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="paneVereinigung" layoutX="10.0" layoutY="10.0" prefHeight="509.0" prefWidth="656.0" visible="false">
+               <children>
+                  <ListView fx:id="listViewManagement5" accessibleRoleDescription="Menge" layoutX="15.0" layoutY="404.0" prefHeight="91.0" prefWidth="640.0" />
+                  <Button fx:id="berechneVereinBtn" layoutX="183.0" layoutY="281.0" mnemonicParsing="false" onAction="#handleClicks" prefHeight="42.0" prefWidth="304.0" text="Berechne" visible="false" />
+                  <Label fx:id="lbNoteWork5" layoutX="15.0" layoutY="386.0" text="Note: Hier sehen Sie die schon erstellten Mengen" />
+                  <Label layoutX="47.0" layoutY="160.0" text="Buchstabe / Letter1: ">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="txtFeldLetterVereinC" layoutX="225.0" layoutY="160.0" prefHeight="26.0" prefWidth="65.0" />
+                  <TextField fx:id="txtFeldLetterVereinB" layoutX="545.0" layoutY="160.0" prefHeight="26.0" prefWidth="65.0" />
+                  <Label layoutX="335.0" layoutY="159.0" text="Buchstabe / Letter2: ">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <CheckBox fx:id="selectVerein" layoutX="44.0" layoutY="346.0" mnemonicParsing="false" onAction="#handleClicks" text="If Selected: Berechnet Alle Mengen für Vereinigung" visible="false" />
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="paneDifferenz" layoutX="10.0" layoutY="10.0" prefHeight="200.0" prefWidth="200.0" visible="false">
+               <children>
+                  <ListView fx:id="listViewManagement1" accessibleRoleDescription="Menge" layoutX="15.0" layoutY="404.0" prefHeight="91.0" prefWidth="640.0" />
+                  <Button fx:id="berechneDiffBtn" layoutX="183.0" layoutY="281.0" mnemonicParsing="false" onAction="#handleClicks" prefHeight="42.0" prefWidth="304.0" text="Berechne" visible="false" />
+                  <Label fx:id="lbNoteWork1" layoutX="15.0" layoutY="386.0" text="Note: Hier sehen Sie die schon erstellten Mengen" />
+                  <Label layoutX="113.0" layoutY="161.0" text="Buchstabe / Letter: ">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="txtFeldLetterDiffC" layoutX="335.0" layoutY="161.0" prefHeight="26.0" prefWidth="65.0" />
+                  <Label fx:id="lbNoteWork11" layoutX="117.0" layoutY="67.0" text="Wichtig: Sie müssen zwei Mengen erstellen damit der berechne Button auftaucht :)" />
+                  <Label fx:id="lblLetterDiff" layoutX="113.0" layoutY="200.0" text="Buchstabe / Letter: ">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="txtFeldLetterDiffB" layoutX="335.0" layoutY="200.0" prefHeight="26.0" prefWidth="65.0" />
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="paneDurchschnitt" layoutX="10.0" layoutY="10.0" prefHeight="200.0" prefWidth="200.0" visible="false">
+               <children>
+                  <ListView fx:id="listViewManagement7" accessibleRoleDescription="Menge" layoutX="15.0" layoutY="404.0" prefHeight="91.0" prefWidth="640.0" />
+                  <Button fx:id="berechneDurchschnittBtn" layoutX="183.0" layoutY="281.0" mnemonicParsing="false" onAction="#handleClicks" prefHeight="42.0" prefWidth="304.0" text="Berechne" visible="false" />
+                  <Label fx:id="lbNoteWork521" layoutX="15.0" layoutY="386.0" text="Note: Hier sehen Sie die schon erstellten Mengen" />
+                  <Label layoutX="47.0" layoutY="160.0" text="Buchstabe / Letter1: ">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="txtFeldLetterDurchschnittC" layoutX="225.0" layoutY="160.0" prefHeight="26.0" prefWidth="65.0" />
+                  <TextField fx:id="txtFeldLetterDurchschnittB" layoutX="539.0" layoutY="160.0" prefHeight="26.0" prefWidth="65.0" />
+                  <Label layoutX="335.0" layoutY="159.0" text="Buchstabe / Letter2: ">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <CheckBox fx:id="selectDurchschnitt" layoutX="44.0" layoutY="346.0" mnemonicParsing="false" onAction="#handleClicks" text="If Selected: Berechnet Alle Mengen für Durchschnitt" visible="false" />
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="paneDelta" layoutX="10.0" layoutY="10.0" prefHeight="200.0" prefWidth="200.0">
+               <children>
+                  <ListView fx:id="listViewManagement6" accessibleRoleDescription="Menge" layoutX="15.0" layoutY="404.0" prefHeight="91.0" prefWidth="640.0" />
+                  <Button fx:id="berechneDeltaBtn" layoutX="183.0" layoutY="281.0" mnemonicParsing="false" onAction="#handleClicks" prefHeight="42.0" prefWidth="304.0" text="Berechne" visible="false" />
+                  <Label fx:id="lbNoteWork52" layoutX="15.0" layoutY="386.0" text="Note: Hier sehen Sie die schon erstellten Mengen" />
+                  <Label layoutX="41.0" layoutY="132.0" text="Buchstabe / Letter1: ">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="txtFeldLetterDeltaC" layoutX="224.0" layoutY="132.0" prefHeight="26.0" prefWidth="65.0" />
+                  <TextField fx:id="txtFeldLetterDeltaB" layoutX="518.0" layoutY="131.0" prefHeight="26.0" prefWidth="65.0" />
+                  <Label layoutX="323.0" layoutY="131.0" text="Buchstabe / Letter2: ">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <CheckBox fx:id="selectDelta" layoutX="18.0" layoutY="353.0" mnemonicParsing="false" onAction="#handleClicks" text="If Selected: Berechnet Alle Mengen für Delta" visible="false" />
+               </children>
+            </AnchorPane>
+         </children>
+      </StackPane>
+   </children>
+</AnchorPane>

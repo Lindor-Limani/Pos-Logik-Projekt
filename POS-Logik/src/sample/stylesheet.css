@@ -1,0 +1,13 @@
+.menu .label{
+	-fx-text-fill: #ffffff
+
+}
+
+.menu-item .label{
+	-fx-text-fill: black
+}
+
+.menu:hover {
+	-fx-background-color: #bc784e;
+}
+
